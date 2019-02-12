@@ -3,9 +3,9 @@ name: default
 
 steps:
   - name: test
-    image: gradle
+    image: openjdk
     commands:
-      - gradle test
+      - ./gradlew test
     when:
       branch:
         - master
