@@ -2,17 +2,10 @@ kind: pipeline
 name: default
 
 steps:
-  - name: test
-    privileged: true
-    pull: always
-    image: openjdk
-    commands:
-      - echo hello
-      - ./gradlew test
-    when:
-      branch:
-        - master
-      event:
-        - push
-        - pull_request
-
+- name: test
+  privileged: true
+  pull: always
+  image: openjdk
+  commands:
+  - echo hello
+  - ./gradlew test
