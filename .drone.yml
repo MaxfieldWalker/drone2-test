@@ -6,3 +6,6 @@ steps:
     image: gradle
     commands:
       - gradle test
+    when:
+      branch:
+        - master
